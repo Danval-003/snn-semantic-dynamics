@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or its research artifacts, please cite this repository."
+title: "SNN Semantic Dynamics"
+type: software
+authors:
+  - family-names: "Valdez"
+    given-names: "Daniel"
+    email: "danarvare@outlook.com"
+repository-code: "https://github.com/Danval-003/snn-semantic-dynamics"
+url: "https://github.com/Danval-003/snn-semantic-dynamics"
+license: MIT
+version: "1.0.0-e1"
+date-released: 2026-09-28
+abstract: >-
+  Reproducible experiments on how matched recurrent spiking and artificial
+  neural networks transform ordered grapheme events into semantic population
+  structure.
+keywords:
+  - spiking neural networks
+  - semantic representation
+  - recurrent neural networks
+  - temporal computation
+  - reproducible research
+preferred-citation:
+  type: article
+  title: "Orthographic-to-Semantic Abstraction in Matched Spiking and Artificial Recurrent Networks"
+  authors:
+    - family-names: "Valdez"
+      given-names: "Daniel"
+  year: 2026

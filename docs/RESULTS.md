@@ -88,5 +88,8 @@ This demonstrates supervised contextual transfer to isolated inputs. It does
 not demonstrate unsupervised acquisition from raw text.
 
 Machine-readable paired comparisons are in
-[`reports/benchmark_summary.json`](../reports/benchmark_summary.json).
-
+[`reports/benchmark_summary.json`](../reports/benchmark_summary.json). The
+underlying headline values for every model and seed are frozen in
+[`reports/raw_metrics.jsonl`](../reports/raw_metrics.jsonl), allowing the
+reported seed-level summaries and paired differences to be recalculated
+without retraining.

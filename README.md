@@ -1,5 +1,10 @@
 # E1 — Hierarchical orthographic-to-semantic organization in a recurrent SNN
 
+[![CI](https://github.com/Danval-003/snn-semantic-dynamics/actions/workflows/ci.yml/badge.svg)](https://github.com/Danval-003/snn-semantic-dynamics/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**[📄 Manuscript](paper/orthographic-to-semantic-abstraction.pdf) · [💻 Code](https://github.com/Danval-003/snn-semantic-dynamics) · [📊 Results](docs/RESULTS.md) · [🧪 Reproduce](docs/REPRODUCIBILITY.md)**
+
 E1 is a small, CPU-reproducible study of whether a recurrent spiking neural
 network can transform grapheme events into semantically organized neural
 activity without BPE, word embeddings, attention, Transformers, or pretrained
@@ -84,6 +89,7 @@ Convenience commands:
 
 ```bash
 make test       # unit tests
+make data       # regenerate the tracked, human-auditable dataset exports
 make quick      # tests + short smoke run
 make full       # all experiments, summaries, and figures
 make figures    # regenerate tracked SVG figures from run artifacts
@@ -99,12 +105,14 @@ versioned.
 ```text
 configs/                  experiment configurations
 data/                     audited, versioned evaluation pairs
+data/generated/           exact generated train/test manifests
 docs/EXPERIMENT.md        full protocol and detailed results
 docs/RESEARCH_LOG.md      chronological research decisions
 docs/RESULTS.md           frozen result tables and claim boundaries
 docs/PAPER_OUTLINE.md     working six-page manuscript outline
 docs/REPRODUCIBILITY.md   protocols, runtimes, and exact commands
 reports/                  compact results and tracked figures
+paper/                    current manuscript PDF
 scripts/                  complete and quick reproduction entry points
 src/e1_spikes/            models, metrics, controls, and runners
 tests/                    mechanical and split-integrity tests
@@ -121,6 +129,13 @@ not unsupervised corpus exposure.
 
 See [the frozen results](docs/RESULTS.md), [the research log](docs/RESEARCH_LOG.md),
 and [the full protocol](docs/EXPERIMENT.md).
+
+The exact fixed-validation, relation-disjoint, and contextual-transfer
+triplets are exported under [`data/generated/`](data/generated/). Run
+`make data` to regenerate them; CI verifies that these files remain identical
+to the constructors used by the experiments. Per-seed headline metrics are
+preserved in [`reports/raw_metrics.jsonl`](reports/raw_metrics.jsonl), allowing
+confidence intervals to be recomputed without retraining.
 
 ## License
 

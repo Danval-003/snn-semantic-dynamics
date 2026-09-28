@@ -1,0 +1,260 @@
+{"anchor": "gato", "index": 0, "kind": "random_negative", "negative": "automóvil", "positive": "can"}
+{"anchor": "felino", "index": 1, "kind": "random_negative", "negative": "maullido", "positive": "gato"}
+{"anchor": "automóvil", "index": 2, "kind": "random_negative", "negative": "vivienda", "positive": "coche"}
+{"anchor": "nube", "index": 3, "kind": "random_negative", "negative": "árbol", "positive": "lluvia"}
+{"anchor": "vivienda", "index": 4, "kind": "random_negative", "negative": "tormenta", "positive": "hogar"}
+{"anchor": "lluvia", "index": 5, "kind": "random_negative", "negative": "árbol", "positive": "tormenta"}
+{"anchor": "automóvil", "index": 6, "kind": "random_negative", "negative": "ladrido", "positive": "carro"}
+{"anchor": "perro", "index": 7, "kind": "random_negative", "negative": "casa", "positive": "can"}
+{"anchor": "vehículo", "index": 8, "kind": "random_negative", "negative": "lluvia", "positive": "carro"}
+{"anchor": "carro", "index": 9, "kind": "random_negative", "negative": "hogar", "positive": "vehículo"}
+{"anchor": "ladrido", "index": 10, "kind": "random_negative", "negative": "carro", "positive": "maullido"}
+{"anchor": "carro", "index": 11, "kind": "random_negative", "negative": "perro", "positive": "coche"}
+{"anchor": "coche", "index": 12, "kind": "random_negative", "negative": "tormenta", "positive": "automóvil"}
+{"anchor": "vehículo", "index": 13, "kind": "random_negative", "negative": "rápido", "positive": "coche"}
+{"anchor": "ladrido", "index": 14, "kind": "random_negative", "negative": "se detuvo", "positive": "maullido"}
+{"anchor": "tormenta", "index": 15, "kind": "random_negative", "negative": "perro", "positive": "nube"}
+{"anchor": "vivienda", "index": 16, "kind": "random_negative", "negative": "coche", "positive": "casa"}
+{"anchor": "ligero", "index": 17, "kind": "random_negative", "negative": "árbol", "positive": "rápido"}
+{"anchor": "nube", "index": 18, "kind": "random_negative", "negative": "carro", "positive": "lluvia"}
+{"anchor": "rápido", "index": 19, "kind": "random_negative", "negative": "árbol", "positive": "veloz"}
+{"anchor": "veloz", "index": 20, "kind": "random_negative", "negative": "hogar", "positive": "rápido"}
+{"anchor": "can", "index": 21, "kind": "random_negative", "negative": "bosque", "positive": "gato"}
+{"anchor": "frenó", "index": 22, "kind": "random_negative", "negative": "nube", "positive": "paró"}
+{"anchor": "felino", "index": 23, "kind": "random_negative", "negative": "paró", "positive": "can"}
+{"anchor": "árbol", "index": 24, "kind": "random_negative", "negative": "vivienda", "positive": "bosque"}
+{"anchor": "árbol", "index": 25, "kind": "random_negative", "negative": "tormenta", "positive": "pino"}
+{"anchor": "coche", "index": 26, "kind": "random_negative", "negative": "casa", "positive": "vehículo"}
+{"anchor": "carro", "index": 27, "kind": "random_negative", "negative": "árbol", "positive": "coche"}
+{"anchor": "vivienda", "index": 28, "kind": "random_negative", "negative": "gato", "positive": "casa"}
+{"anchor": "ladrido", "index": 29, "kind": "random_negative", "negative": "automóvil", "positive": "maullido"}
+{"anchor": "carro", "index": 30, "kind": "random_negative", "negative": "árbol", "positive": "vehículo"}
+{"anchor": "maullido", "index": 31, "kind": "random_negative", "negative": "hogar", "positive": "ladrido"}
+{"anchor": "casa", "index": 32, "kind": "random_negative", "negative": "coche", "positive": "vivienda"}
+{"anchor": "tormenta", "index": 33, "kind": "random_negative", "negative": "ladrido", "positive": "lluvia"}
+{"anchor": "felino", "index": 34, "kind": "random_negative", "negative": "nube", "positive": "can"}
+{"anchor": "gato", "index": 35, "kind": "random_negative", "negative": "hogar", "positive": "can"}
+{"anchor": "can", "index": 36, "kind": "random_negative", "negative": "paró", "positive": "gato"}
+{"anchor": "gato", "index": 37, "kind": "random_negative", "negative": "maullido", "positive": "perro"}
+{"anchor": "se detuvo", "index": 38, "kind": "random_negative", "negative": "carro", "positive": "paró"}
+{"anchor": "pino", "index": 39, "kind": "random_negative", "negative": "frenó", "positive": "bosque"}
+{"anchor": "carro", "index": 40, "kind": "random_negative", "negative": "veloz", "positive": "automóvil"}
+{"anchor": "automóvil", "index": 41, "kind": "random_negative", "negative": "casa", "positive": "vehículo"}
+{"anchor": "hogar", "index": 42, "kind": "random_negative", "negative": "gato", "positive": "casa"}
+{"anchor": "árbol", "index": 43, "kind": "random_negative", "negative": "ladrido", "positive": "bosque"}
+{"anchor": "bosque", "index": 44, "kind": "random_negative", "negative": "maullido", "positive": "pino"}
+{"anchor": "carro", "index": 45, "kind": "random_negative", "negative": "felino", "positive": "automóvil"}
+{"anchor": "gato", "index": 46, "kind": "random_negative", "negative": "frenó", "positive": "can"}
+{"anchor": "felino", "index": 47, "kind": "random_negative", "negative": "ladrido", "positive": "perro"}
+{"anchor": "tormenta", "index": 48, "kind": "random_negative", "negative": "bosque", "positive": "lluvia"}
+{"anchor": "carro", "index": 49, "kind": "random_negative", "negative": "perro", "positive": "vehículo"}
+{"anchor": "paró", "index": 50, "kind": "random_negative", "negative": "perro", "positive": "se detuvo"}
+{"anchor": "automóvil", "index": 51, "kind": "random_negative", "negative": "rápido", "positive": "vehículo"}
+{"anchor": "veloz", "index": 52, "kind": "random_negative", "negative": "frenó", "positive": "ligero"}
+{"anchor": "frenó", "index": 53, "kind": "random_negative", "negative": "rápido", "positive": "paró"}
+{"anchor": "perro", "index": 54, "kind": "random_negative", "negative": "carro", "positive": "gato"}
+{"anchor": "se detuvo", "index": 55, "kind": "random_negative", "negative": "tormenta", "positive": "paró"}
+{"anchor": "perro", "index": 56, "kind": "random_negative", "negative": "tormenta", "positive": "can"}
+{"anchor": "ligero", "index": 57, "kind": "random_negative", "negative": "perro", "positive": "rápido"}
+{"anchor": "bosque", "index": 58, "kind": "random_negative", "negative": "nube", "positive": "árbol"}
+{"anchor": "felino", "index": 59, "kind": "random_negative", "negative": "automóvil", "positive": "gato"}
+{"anchor": "se detuvo", "index": 60, "kind": "random_negative", "negative": "nube", "positive": "frenó"}
+{"anchor": "se detuvo", "index": 61, "kind": "random_negative", "negative": "can", "positive": "frenó"}
+{"anchor": "coche", "index": 62, "kind": "random_negative", "negative": "bosque", "positive": "automóvil"}
+{"anchor": "lluvia", "index": 63, "kind": "random_negative", "negative": "pino", "positive": "tormenta"}
+{"anchor": "felino", "index": 64, "kind": "random_negative", "negative": "carro", "positive": "perro"}
+{"anchor": "nube", "index": 65, "kind": "random_negative", "negative": "árbol", "positive": "tormenta"}
+{"anchor": "ladrido", "index": 66, "kind": "random_negative", "negative": "coche", "positive": "maullido"}
+{"anchor": "carro", "index": 67, "kind": "random_negative", "negative": "ladrido", "positive": "automóvil"}
+{"anchor": "coche", "index": 68, "kind": "random_negative", "negative": "ladrido", "positive": "automóvil"}
+{"anchor": "ladrido", "index": 69, "kind": "random_negative", "negative": "perro", "positive": "maullido"}
+{"anchor": "se detuvo", "index": 70, "kind": "random_negative", "negative": "carro", "positive": "frenó"}
+{"anchor": "lluvia", "index": 71, "kind": "random_negative", "negative": "ligero", "positive": "tormenta"}
+{"anchor": "ligero", "index": 72, "kind": "random_negative", "negative": "vivienda", "positive": "rápido"}
+{"anchor": "árbol", "index": 73, "kind": "random_negative", "negative": "casa", "positive": "pino"}
+{"anchor": "can", "index": 74, "kind": "random_negative", "negative": "veloz", "positive": "perro"}
+{"anchor": "veloz", "index": 75, "kind": "random_negative", "negative": "se detuvo", "positive": "ligero"}
+{"anchor": "árbol", "index": 76, "kind": "random_negative", "negative": "se detuvo", "positive": "pino"}
+{"anchor": "paró", "index": 77, "kind": "random_negative", "negative": "vivienda", "positive": "frenó"}
+{"anchor": "árbol", "index": 78, "kind": "random_negative", "negative": "perro", "positive": "bosque"}
+{"anchor": "pino", "index": 79, "kind": "random_negative", "negative": "automóvil", "positive": "bosque"}
+{"anchor": "casa", "index": 80, "kind": "random_negative", "negative": "nube", "positive": "vivienda"}
+{"anchor": "perro", "index": 81, "kind": "random_negative", "negative": "lluvia", "positive": "felino"}
+{"anchor": "vehículo", "index": 82, "kind": "random_negative", "negative": "tormenta", "positive": "automóvil"}
+{"anchor": "coche", "index": 83, "kind": "random_negative", "negative": "ligero", "positive": "carro"}
+{"anchor": "vivienda", "index": 84, "kind": "random_negative", "negative": "veloz", "positive": "casa"}
+{"anchor": "paró", "index": 85, "kind": "random_negative", "negative": "rápido", "positive": "se detuvo"}
+{"anchor": "frenó", "index": 86, "kind": "random_negative", "negative": "rápido", "positive": "se detuvo"}
+{"anchor": "veloz", "index": 87, "kind": "random_negative", "negative": "coche", "positive": "rápido"}
+{"anchor": "perro", "index": 88, "kind": "random_negative", "negative": "hogar", "positive": "gato"}
+{"anchor": "paró", "index": 89, "kind": "random_negative", "negative": "carro", "positive": "frenó"}
+{"anchor": "paró", "index": 90, "kind": "random_negative", "negative": "automóvil", "positive": "se detuvo"}
+{"anchor": "casa", "index": 91, "kind": "random_negative", "negative": "veloz", "positive": "hogar"}
+{"anchor": "vehículo", "index": 92, "kind": "random_negative", "negative": "gato", "positive": "coche"}
+{"anchor": "paró", "index": 93, "kind": "random_negative", "negative": "bosque", "positive": "se detuvo"}
+{"anchor": "ladrido", "index": 94, "kind": "random_negative", "negative": "vivienda", "positive": "maullido"}
+{"anchor": "felino", "index": 95, "kind": "random_negative", "negative": "lluvia", "positive": "can"}
+{"anchor": "lluvia", "index": 96, "kind": "random_negative", "negative": "automóvil", "positive": "tormenta"}
+{"anchor": "árbol", "index": 97, "kind": "random_negative", "negative": "vehículo", "positive": "pino"}
+{"anchor": "nube", "index": 98, "kind": "random_negative", "negative": "gato", "positive": "tormenta"}
+{"anchor": "ladrido", "index": 99, "kind": "random_negative", "negative": "tormenta", "positive": "maullido"}
+{"anchor": "automóvil", "index": 100, "kind": "random_negative", "negative": "se detuvo", "positive": "carro"}
+{"anchor": "tormenta", "index": 101, "kind": "random_negative", "negative": "frenó", "positive": "nube"}
+{"anchor": "árbol", "index": 102, "kind": "random_negative", "negative": "coche", "positive": "pino"}
+{"anchor": "veloz", "index": 103, "kind": "random_negative", "negative": "automóvil", "positive": "rápido"}
+{"anchor": "carro", "index": 104, "kind": "random_negative", "negative": "maullido", "positive": "vehículo"}
+{"anchor": "coche", "index": 105, "kind": "random_negative", "negative": "tormenta", "positive": "carro"}
+{"anchor": "vehículo", "index": 106, "kind": "random_negative", "negative": "nube", "positive": "carro"}
+{"anchor": "pino", "index": 107, "kind": "random_negative", "negative": "can", "positive": "árbol"}
+{"anchor": "carro", "index": 108, "kind": "random_negative", "negative": "árbol", "positive": "automóvil"}
+{"anchor": "vivienda", "index": 109, "kind": "random_negative", "negative": "carro", "positive": "hogar"}
+{"anchor": "árbol", "index": 110, "kind": "random_negative", "negative": "ligero", "positive": "pino"}
+{"anchor": "can", "index": 111, "kind": "random_negative", "negative": "maullido", "positive": "perro"}
+{"anchor": "gato", "index": 112, "kind": "random_negative", "negative": "vivienda", "positive": "felino"}
+{"anchor": "can", "index": 113, "kind": "random_negative", "negative": "automóvil", "positive": "felino"}
+{"anchor": "vehículo", "index": 114, "kind": "random_negative", "negative": "lluvia", "positive": "automóvil"}
+{"anchor": "felino", "index": 115, "kind": "random_negative", "negative": "ladrido", "positive": "gato"}
+{"anchor": "casa", "index": 116, "kind": "random_negative", "negative": "gato", "positive": "vivienda"}
+{"anchor": "casa", "index": 117, "kind": "random_negative", "negative": "veloz", "positive": "vivienda"}
+{"anchor": "automóvil", "index": 118, "kind": "random_negative", "negative": "tormenta", "positive": "coche"}
+{"anchor": "casa", "index": 119, "kind": "random_negative", "negative": "frenó", "positive": "hogar"}
+{"anchor": "se detuvo", "index": 120, "kind": "random_negative", "negative": "bosque", "positive": "frenó"}
+{"anchor": "felino", "index": 121, "kind": "random_negative", "negative": "automóvil", "positive": "perro"}
+{"anchor": "se detuvo", "index": 122, "kind": "random_negative", "negative": "ladrido", "positive": "paró"}
+{"anchor": "coche", "index": 123, "kind": "random_negative", "negative": "se detuvo", "positive": "automóvil"}
+{"anchor": "lluvia", "index": 124, "kind": "random_negative", "negative": "felino", "positive": "nube"}
+{"anchor": "vehículo", "index": 125, "kind": "random_negative", "negative": "bosque", "positive": "coche"}
+{"anchor": "vehículo", "index": 126, "kind": "random_negative", "negative": "frenó", "positive": "coche"}
+{"anchor": "tormenta", "index": 127, "kind": "random_negative", "negative": "paró", "positive": "lluvia"}
+{"anchor": "gato", "index": 128, "kind": "random_negative", "negative": "casa", "positive": "perro"}
+{"anchor": "árbol", "index": 129, "kind": "random_negative", "negative": "maullido", "positive": "pino"}
+{"anchor": "perro", "index": 130, "kind": "random_negative", "negative": "rápido", "positive": "can"}
+{"anchor": "gato", "index": 131, "kind": "random_negative", "negative": "coche", "positive": "can"}
+{"anchor": "can", "index": 132, "kind": "random_negative", "negative": "ligero", "positive": "gato"}
+{"anchor": "veloz", "index": 133, "kind": "random_negative", "negative": "nube", "positive": "ligero"}
+{"anchor": "perro", "index": 134, "kind": "random_negative", "negative": "frenó", "positive": "felino"}
+{"anchor": "se detuvo", "index": 135, "kind": "random_negative", "negative": "lluvia", "positive": "paró"}
+{"anchor": "gato", "index": 136, "kind": "random_negative", "negative": "se detuvo", "positive": "can"}
+{"anchor": "casa", "index": 137, "kind": "random_negative", "negative": "se detuvo", "positive": "vivienda"}
+{"anchor": "vivienda", "index": 138, "kind": "random_negative", "negative": "pino", "positive": "casa"}
+{"anchor": "gato", "index": 139, "kind": "random_negative", "negative": "automóvil", "positive": "perro"}
+{"anchor": "ligero", "index": 140, "kind": "random_negative", "negative": "nube", "positive": "veloz"}
+{"anchor": "carro", "index": 141, "kind": "random_negative", "negative": "nube", "positive": "coche"}
+{"anchor": "gato", "index": 142, "kind": "random_negative", "negative": "vehículo", "positive": "can"}
+{"anchor": "gato", "index": 143, "kind": "random_negative", "negative": "coche", "positive": "perro"}
+{"anchor": "ligero", "index": 144, "kind": "random_negative", "negative": "lluvia", "positive": "veloz"}
+{"anchor": "gato", "index": 145, "kind": "random_negative", "negative": "tormenta", "positive": "perro"}
+{"anchor": "can", "index": 146, "kind": "random_negative", "negative": "frenó", "positive": "perro"}
+{"anchor": "nube", "index": 147, "kind": "random_negative", "negative": "veloz", "positive": "lluvia"}
+{"anchor": "felino", "index": 148, "kind": "random_negative", "negative": "nube", "positive": "gato"}
+{"anchor": "lluvia", "index": 149, "kind": "random_negative", "negative": "hogar", "positive": "tormenta"}
+{"anchor": "carro", "index": 150, "kind": "random_negative", "negative": "can", "positive": "vehículo"}
+{"anchor": "tormenta", "index": 151, "kind": "random_negative", "negative": "vivienda", "positive": "lluvia"}
+{"anchor": "maullido", "index": 152, "kind": "random_negative", "negative": "automóvil", "positive": "ladrido"}
+{"anchor": "rápido", "index": 153, "kind": "random_negative", "negative": "can", "positive": "ligero"}
+{"anchor": "frenó", "index": 154, "kind": "random_negative", "negative": "can", "positive": "paró"}
+{"anchor": "gato", "index": 155, "kind": "random_negative", "negative": "ligero", "positive": "can"}
+{"anchor": "bosque", "index": 156, "kind": "random_negative", "negative": "automóvil", "positive": "árbol"}
+{"anchor": "ladrido", "index": 157, "kind": "random_negative", "negative": "paró", "positive": "maullido"}
+{"anchor": "can", "index": 158, "kind": "random_negative", "negative": "lluvia", "positive": "perro"}
+{"anchor": "árbol", "index": 159, "kind": "random_negative", "negative": "tormenta", "positive": "bosque"}
+{"anchor": "maullido", "index": 160, "kind": "random_negative", "negative": "vehículo", "positive": "ladrido"}
+{"anchor": "paró", "index": 161, "kind": "random_negative", "negative": "veloz", "positive": "frenó"}
+{"anchor": "veloz", "index": 162, "kind": "random_negative", "negative": "vehículo", "positive": "ligero"}
+{"anchor": "ladrido", "index": 163, "kind": "random_negative", "negative": "lluvia", "positive": "maullido"}
+{"anchor": "lluvia", "index": 164, "kind": "random_negative", "negative": "casa", "positive": "nube"}
+{"anchor": "lluvia", "index": 165, "kind": "random_negative", "negative": "can", "positive": "nube"}
+{"anchor": "automóvil", "index": 166, "kind": "random_negative", "negative": "hogar", "positive": "carro"}
+{"anchor": "tormenta", "index": 167, "kind": "random_negative", "negative": "ligero", "positive": "nube"}
+{"anchor": "rápido", "index": 168, "kind": "random_negative", "negative": "carro", "positive": "veloz"}
+{"anchor": "ladrido", "index": 169, "kind": "random_negative", "negative": "pino", "positive": "maullido"}
+{"anchor": "paró", "index": 170, "kind": "random_negative", "negative": "maullido", "positive": "se detuvo"}
+{"anchor": "bosque", "index": 171, "kind": "random_negative", "negative": "hogar", "positive": "árbol"}
+{"anchor": "se detuvo", "index": 172, "kind": "random_negative", "negative": "ligero", "positive": "frenó"}
+{"anchor": "felino", "index": 173, "kind": "random_negative", "negative": "tormenta", "positive": "can"}
+{"anchor": "perro", "index": 174, "kind": "random_negative", "negative": "veloz", "positive": "felino"}
+{"anchor": "gato", "index": 175, "kind": "random_negative", "negative": "veloz", "positive": "felino"}
+{"anchor": "gato", "index": 176, "kind": "random_negative", "negative": "rápido", "positive": "perro"}
+{"anchor": "vehículo", "index": 177, "kind": "random_negative", "negative": "se detuvo", "positive": "automóvil"}
+{"anchor": "ligero", "index": 178, "kind": "random_negative", "negative": "paró", "positive": "veloz"}
+{"anchor": "frenó", "index": 179, "kind": "random_negative", "negative": "felino", "positive": "paró"}
+{"anchor": "can", "index": 180, "kind": "random_negative", "negative": "carro", "positive": "gato"}
+{"anchor": "pino", "index": 181, "kind": "random_negative", "negative": "rápido", "positive": "árbol"}
+{"anchor": "can", "index": 182, "kind": "random_negative", "negative": "paró", "positive": "perro"}
+{"anchor": "gato", "index": 183, "kind": "random_negative", "negative": "nube", "positive": "felino"}
+{"anchor": "can", "index": 184, "kind": "random_negative", "negative": "nube", "positive": "gato"}
+{"anchor": "veloz", "index": 185, "kind": "random_negative", "negative": "vehículo", "positive": "rápido"}
+{"anchor": "carro", "index": 186, "kind": "random_negative", "negative": "maullido", "positive": "coche"}
+{"anchor": "ligero", "index": 187, "kind": "random_negative", "negative": "tormenta", "positive": "rápido"}
+{"anchor": "perro", "index": 188, "kind": "random_negative", "negative": "maullido", "positive": "gato"}
+{"anchor": "perro", "index": 189, "kind": "random_negative", "negative": "nube", "positive": "gato"}
+{"anchor": "hogar", "index": 190, "kind": "random_negative", "negative": "frenó", "positive": "casa"}
+{"anchor": "felino", "index": 191, "kind": "random_negative", "negative": "frenó", "positive": "perro"}
+{"anchor": "ligero", "index": 192, "kind": "random_negative", "negative": "maullido", "positive": "rápido"}
+{"anchor": "perro", "index": 193, "kind": "random_negative", "negative": "árbol", "positive": "felino"}
+{"anchor": "vivienda", "index": 194, "kind": "random_negative", "negative": "bosque", "positive": "hogar"}
+{"anchor": "perro", "index": 195, "kind": "random_negative", "negative": "bosque", "positive": "felino"}
+{"anchor": "lluvia", "index": 196, "kind": "random_negative", "negative": "ladrido", "positive": "nube"}
+{"anchor": "perro", "index": 197, "kind": "random_negative", "negative": "casa", "positive": "gato"}
+{"anchor": "can", "index": 198, "kind": "random_negative", "negative": "automóvil", "positive": "gato"}
+{"anchor": "perro", "index": 199, "kind": "random_negative", "negative": "automóvil", "positive": "gato"}
+{"anchor": "casa", "index": 200, "kind": "random_negative", "negative": "can", "positive": "hogar"}
+{"anchor": "can", "index": 201, "kind": "random_negative", "negative": "vehículo", "positive": "perro"}
+{"anchor": "can", "index": 202, "kind": "random_negative", "negative": "nube", "positive": "perro"}
+{"anchor": "pino", "index": 203, "kind": "random_negative", "negative": "tormenta", "positive": "bosque"}
+{"anchor": "can", "index": 204, "kind": "random_negative", "negative": "lluvia", "positive": "felino"}
+{"anchor": "automóvil", "index": 205, "kind": "random_negative", "negative": "hogar", "positive": "vehículo"}
+{"anchor": "pino", "index": 206, "kind": "random_negative", "negative": "perro", "positive": "árbol"}
+{"anchor": "paró", "index": 207, "kind": "random_negative", "negative": "bosque", "positive": "frenó"}
+{"anchor": "vehículo", "index": 208, "kind": "random_negative", "negative": "ladrido", "positive": "automóvil"}
+{"anchor": "perro", "index": 209, "kind": "random_negative", "negative": "vehículo", "positive": "felino"}
+{"anchor": "felino", "index": 210, "kind": "random_negative", "negative": "carro", "positive": "gato"}
+{"anchor": "automóvil", "index": 211, "kind": "random_negative", "negative": "se detuvo", "positive": "vehículo"}
+{"anchor": "rápido", "index": 212, "kind": "random_negative", "negative": "tormenta", "positive": "veloz"}
+{"anchor": "se detuvo", "index": 213, "kind": "random_negative", "negative": "rápido", "positive": "frenó"}
+{"anchor": "bosque", "index": 214, "kind": "random_negative", "negative": "automóvil", "positive": "pino"}
+{"anchor": "felino", "index": 215, "kind": "random_negative", "negative": "carro", "positive": "can"}
+{"anchor": "se detuvo", "index": 216, "kind": "random_negative", "negative": "pino", "positive": "frenó"}
+{"anchor": "frenó", "index": 217, "kind": "random_negative", "negative": "perro", "positive": "se detuvo"}
+{"anchor": "veloz", "index": 218, "kind": "random_negative", "negative": "perro", "positive": "ligero"}
+{"anchor": "automóvil", "index": 219, "kind": "random_negative", "negative": "gato", "positive": "vehículo"}
+{"anchor": "automóvil", "index": 220, "kind": "random_negative", "negative": "maullido", "positive": "coche"}
+{"anchor": "ligero", "index": 221, "kind": "random_negative", "negative": "automóvil", "positive": "veloz"}
+{"anchor": "frenó", "index": 222, "kind": "random_negative", "negative": "coche", "positive": "paró"}
+{"anchor": "paró", "index": 223, "kind": "random_negative", "negative": "can", "positive": "frenó"}
+{"anchor": "can", "index": 224, "kind": "random_negative", "negative": "pino", "positive": "perro"}
+{"anchor": "lluvia", "index": 225, "kind": "random_negative", "negative": "vehículo", "positive": "tormenta"}
+{"anchor": "pino", "index": 226, "kind": "random_negative", "negative": "vehículo", "positive": "árbol"}
+{"anchor": "árbol", "index": 227, "kind": "random_negative", "negative": "hogar", "positive": "pino"}
+{"anchor": "perro", "index": 228, "kind": "random_negative", "negative": "nube", "positive": "can"}
+{"anchor": "bosque", "index": 229, "kind": "random_negative", "negative": "frenó", "positive": "pino"}
+{"anchor": "vehículo", "index": 230, "kind": "random_negative", "negative": "gato", "positive": "carro"}
+{"anchor": "automóvil", "index": 231, "kind": "random_negative", "negative": "frenó", "positive": "coche"}
+{"anchor": "carro", "index": 232, "kind": "random_negative", "negative": "rápido", "positive": "vehículo"}
+{"anchor": "veloz", "index": 233, "kind": "random_negative", "negative": "bosque", "positive": "ligero"}
+{"anchor": "hogar", "index": 234, "kind": "random_negative", "negative": "ligero", "positive": "casa"}
+{"anchor": "pino", "index": 235, "kind": "random_negative", "negative": "lluvia", "positive": "árbol"}
+{"anchor": "automóvil", "index": 236, "kind": "random_negative", "negative": "perro", "positive": "carro"}
+{"anchor": "vehículo", "index": 237, "kind": "random_negative", "negative": "frenó", "positive": "carro"}
+{"anchor": "gato", "index": 238, "kind": "random_negative", "negative": "paró", "positive": "perro"}
+{"anchor": "ligero", "index": 239, "kind": "random_negative", "negative": "pino", "positive": "veloz"}
+{"anchor": "casa", "index": 240, "kind": "hard_orthographic", "negative": "caso", "positive": "hogar"}
+{"anchor": "casa", "index": 241, "kind": "hard_orthographic", "negative": "caso", "positive": "vivienda"}
+{"anchor": "perro", "index": 242, "kind": "hard_orthographic", "negative": "pero", "positive": "can"}
+{"anchor": "perro", "index": 243, "kind": "hard_orthographic", "negative": "pero", "positive": "gato"}
+{"anchor": "perro", "index": 244, "kind": "hard_orthographic", "negative": "pero", "positive": "felino"}
+{"anchor": "carro", "index": 245, "kind": "hard_orthographic", "negative": "barro", "positive": "automóvil"}
+{"anchor": "carro", "index": 246, "kind": "hard_orthographic", "negative": "barro", "positive": "coche"}
+{"anchor": "carro", "index": 247, "kind": "hard_orthographic", "negative": "barro", "positive": "vehículo"}
+{"anchor": "gato", "index": 248, "kind": "hard_orthographic", "negative": "dato", "positive": "perro"}
+{"anchor": "gato", "index": 249, "kind": "hard_orthographic", "negative": "dato", "positive": "can"}
+{"anchor": "gato", "index": 250, "kind": "hard_orthographic", "negative": "dato", "positive": "felino"}
+{"anchor": "pino", "index": 251, "kind": "hard_orthographic", "negative": "vino", "positive": "árbol"}
+{"anchor": "pino", "index": 252, "kind": "hard_orthographic", "negative": "vino", "positive": "bosque"}
+{"anchor": "nube", "index": 253, "kind": "hard_orthographic", "negative": "sube", "positive": "lluvia"}
+{"anchor": "nube", "index": 254, "kind": "hard_orthographic", "negative": "sube", "positive": "tormenta"}
+{"anchor": "coche", "index": 255, "kind": "hard_orthographic", "negative": "noche", "positive": "automóvil"}
+{"anchor": "coche", "index": 256, "kind": "hard_orthographic", "negative": "noche", "positive": "carro"}
+{"anchor": "coche", "index": 257, "kind": "hard_orthographic", "negative": "noche", "positive": "vehículo"}
+{"anchor": "rápido", "index": 258, "kind": "hard_orthographic", "negative": "rapado", "positive": "veloz"}
+{"anchor": "rápido", "index": 259, "kind": "hard_orthographic", "negative": "rapado", "positive": "ligero"}

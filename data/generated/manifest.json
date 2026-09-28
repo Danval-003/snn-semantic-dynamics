@@ -1,0 +1,32 @@
+{
+  "description": "Deterministic exports of the exact fixed validation and generalization triplets constructed by the experiment code.",
+  "files": {
+    "context_exposure_train.jsonl": {
+      "examples": 32,
+      "sha256": "184f3babdf67c7a506cde4958f23fdd4ba19c8dc06e00d62f7a4b6e6e682bac7"
+    },
+    "context_no_exposure_control.jsonl": {
+      "examples": 108,
+      "sha256": "bd545c932e326e5dd37e6343e5ab4576d79f84f6d9794f2a8038b25c2626c0a2"
+    },
+    "context_transfer_test.jsonl": {
+      "examples": 48,
+      "sha256": "bc2a248ef6db0e716cbd24b3a7a2feea66fd4e30416cb5efb460164c1069f334"
+    },
+    "fixed_validation.jsonl": {
+      "examples": 260,
+      "sha256": "167b48ee739ad46ccd5e3216b5c9a6e5c50ea169acc3ddfcd06684437a65f689"
+    },
+    "relation_disjoint_test.jsonl": {
+      "examples": 36,
+      "sha256": "c629ad18cbd4417fbcb17c35d7ff8616920c4f40687ed6840ab6c1d4d456b400"
+    },
+    "relation_train.jsonl": {
+      "examples": 76,
+      "sha256": "5ebed4c831a20159d85b4c9b1957a73dcbe8463573eb795c931f11d7de4688de"
+    }
+  },
+  "generator": "uv run e1-export-data",
+  "schema_version": 1,
+  "seed": 20260928
+}
