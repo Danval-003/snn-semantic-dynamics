@@ -122,3 +122,6 @@ not unsupervised corpus exposure.
 See [the frozen results](docs/RESULTS.md), [the research log](docs/RESEARCH_LOG.md),
 and [the full protocol](docs/EXPERIMENT.md).
 
+## License
+
+Released under the [MIT License](LICENSE).
