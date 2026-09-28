@@ -1,0 +1,7 @@
+base_config = "configs/smoke.toml"
+e11_config = "configs/e11.toml"
+checkpoint_dir = "runs/e12b/heterogeneous_learnable"
+dataset = "data/factorial_pairs.jsonl"
+output_dir = "runs/factorial"
+bootstrap_samples = 10000
+

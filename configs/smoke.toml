@@ -1,0 +1,29 @@
+[run]
+seed = 7
+epochs = 30
+batch_size = 16
+learning_rate = 0.003
+margin = 0.15
+device = "cpu"
+output_dir = "runs/smoke"
+
+[input]
+char_steps = 2
+post_steps = 12
+max_chars = 24
+
+[model]
+hidden_sizes = [48, 64, 48]
+threshold = 0.35
+recurrent = true
+adaptive = true
+heterogeneous = true
+
+[distance]
+taus = [2.0, 6.0, 14.0]
+weights = [0.25, 0.45, 0.30]
+
+[regularization]
+target_rate = 0.08
+rate_weight = 1.0
+balance_weight = 0.03

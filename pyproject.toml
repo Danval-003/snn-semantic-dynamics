@@ -1,0 +1,43 @@
+[project]
+name = "e1-spiking-concepts"
+version = "0.1.0"
+description = "Experimento E1: representaciones conceptuales mediante dinamica temporal spiking"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy>=2,<3",
+  "torch>=2.7,<3",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3"]
+
+[project.scripts]
+e1-smoke = "e1_spikes.train:main"
+e1-e11 = "e1_spikes.e11:main"
+e1-e12a = "e1_spikes.e12a:main"
+e1-e12c = "e1_spikes.e12c:main"
+e1-e12b = "e1_spikes.e12b:main"
+e1-beta-diagnostics = "e1_spikes.beta_diagnostics:main"
+e1-factorial = "e1_spikes.factorial:main"
+e1-ann-baseline = "e1_spikes.ann_baseline:main"
+e1-generalization = "e1_spikes.generalization:main"
+e1-consolidate = "e1_spikes.consolidate:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/e1_spikes"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

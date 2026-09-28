@@ -1,0 +1,9 @@
+base_config = "configs/smoke.toml"
+seeds = [7, 19, 31, 43, 59]
+validation_random_size = 240
+training_repeats = 20
+shuffle_trials = 5
+local_radii = [1, 3]
+bootstrap_samples = 10000
+output_dir = "runs/e11"
+

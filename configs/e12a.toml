@@ -1,0 +1,17 @@
+base_config = "configs/smoke.toml"
+e11_config = "configs/e11.toml"
+checkpoint_dir = "runs/e11"
+output_dir = "runs/e12a"
+bootstrap_samples = 10000
+
+# Subconjuntos de las escalas y pesos originales. Los pesos se renormalizan
+# dentro de cada combinacion por multiscale_distance.
+[distance_variants]
+tau_2 = [0]
+tau_6 = [1]
+tau_14 = [2]
+tau_2_6 = [0, 1]
+tau_2_14 = [0, 2]
+tau_6_14 = [1, 2]
+tau_2_6_14 = [0, 1, 2]
+

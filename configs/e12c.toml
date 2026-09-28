@@ -1,0 +1,7 @@
+base_config = "configs/smoke.toml"
+e11_config = "configs/e11.toml"
+checkpoint_dir = "runs/e11"
+output_dir = "runs/e12c"
+corruption_trials = 5
+bootstrap_samples = 10000
+

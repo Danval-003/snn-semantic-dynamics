@@ -1,0 +1,12 @@
+base_config = "configs/smoke.toml"
+e11_config = "configs/e11.toml"
+output_dir = "runs/e12b"
+bootstrap_samples = 10000
+
+variants = [
+  "single_fixed",
+  "layer_fixed",
+  "heterogeneous_fixed",
+  "heterogeneous_learnable",
+]
+

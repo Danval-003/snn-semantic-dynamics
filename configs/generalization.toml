@@ -1,0 +1,7 @@
+base_config = "configs/smoke.toml"
+e11_config = "configs/e11.toml"
+output_dir = "runs/generalization"
+bootstrap_samples = 10000
+models = ["snn", "ann"]
+conditions = ["no_context", "context_exposed"]
+

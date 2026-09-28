@@ -1,0 +1,133 @@
+{
+  "experiment": "E1-consolidated-SNN-vs-ANN",
+  "seeds": [
+    7,
+    19,
+    31,
+    43,
+    59
+  ],
+  "metrics": {
+    "iid_population_sta": {
+      "snn": {
+        "mean": 0.91307692527771,
+        "ci95_low": 0.8661538600921631,
+        "ci95_high": 0.9453846096992493
+      },
+      "ann": {
+        "mean": 0.9284615278244018,
+        "ci95_low": 0.9153846144676209,
+        "ci95_high": 0.9407692193984986
+      },
+      "snn_minus_ann": {
+        "mean": -0.015384602546691894,
+        "ci95_low": -0.05615381002426147,
+        "ci95_high": 0.012307691574096679
+      }
+    },
+    "hard_orthographic_population_sta": {
+      "snn": {
+        "mean": 0.7200000047683716,
+        "ci95_low": 0.6300000071525573,
+        "ci95_high": 0.7900000095367432
+      },
+      "ann": {
+        "mean": 0.5400000005960465,
+        "ci95_low": 0.3600000113248825,
+        "ci95_high": 0.6599999904632569
+      },
+      "snn_minus_ann": {
+        "mean": 0.18000000417232515,
+        "ci95_low": 0.03999999761581421,
+        "ci95_high": 0.3599999934434891
+      }
+    },
+    "factorial_abstraction_index_l3": {
+      "snn": {
+        "mean": 0.18756367325014625,
+        "ci95_low": 0.07463918283498869,
+        "ci95_high": 0.30397960302700644
+      },
+      "ann": {
+        "mean": 0.141443110699,
+        "ci95_low": 0.06434533596961951,
+        "ci95_high": 0.21854088542838052
+      },
+      "snn_minus_ann": {
+        "mean": 0.04612056255114624,
+        "ci95_low": -0.1032883936647023,
+        "ci95_high": 0.14216695505596
+      }
+    },
+    "ordered_input_dependency_drop": {
+      "snn": {
+        "mean": 0.2592307710647583,
+        "ci95_low": 0.1970769453048706,
+        "ci95_high": 0.29476921558380126
+      },
+      "ann": {
+        "mean": 0.13261536836624144,
+        "ci95_low": 0.12384614944458008,
+        "ci95_high": 0.1395384359359741
+      },
+      "snn_minus_ann": {
+        "mean": 0.12661540269851687,
+        "ci95_low": 0.0590769696235657,
+        "ci95_high": 0.1664730681776999
+      }
+    },
+    "relation_disjoint_population_sta": {
+      "snn": {
+        "mean": 0.7777777791023255,
+        "ci95_low": 0.7055555582046509,
+        "ci95_high": 0.8444444417953492
+      },
+      "ann": {
+        "mean": 0.9055555582046508,
+        "ci95_low": 0.850000011920929,
+        "ci95_high": 0.9611111044883728
+      },
+      "snn_minus_ann": {
+        "mean": -0.12777777910232543,
+        "ci95_low": -0.19999998807907104,
+        "ci95_high": -0.05555557012557984
+      }
+    },
+    "contextual_lexical_transfer_population_sta": {
+      "snn": {
+        "mean": 0.7583333373069763,
+        "ci95_low": 0.6875,
+        "ci95_high": 0.8166666626930237
+      },
+      "ann": {
+        "mean": 0.8333333373069763,
+        "ci95_low": 0.7875,
+        "ci95_high": 0.8833333373069763
+      },
+      "snn_minus_ann": {
+        "mean": -0.075,
+        "ci95_low": -0.1416666626930237,
+        "ci95_high": -0.008333337306976319
+      }
+    }
+  },
+  "activity": {
+    "snn_final_spike_rate": {
+      "mean": 0.08988684117794037,
+      "ci95_low": 0.08138425946235657,
+      "ci95_high": 0.0989499643445015
+    },
+    "ann_final_active_fraction_abs_gt_1e-3": {
+      "mean": 0.9864560008049011,
+      "ci95_low": 0.9816925525665283,
+      "ci95_high": 0.9906744003295899
+    },
+    "warning": "Spike rate and ANN thresholded active fraction are operational, not energetic equivalents."
+  },
+  "interpretation": [
+    "The orthographic-to-semantic layerwise shift is not unique to the SNN.",
+    "The ANN has higher global IID and generalization performance.",
+    "The SNN is stronger on hard orthographic distractors and more order-dependent.",
+    "The SNN state is sparse while the ANN state is effectively dense."
+  ]
+}
