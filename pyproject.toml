@@ -1,6 +1,6 @@
 [project]
 name = "e1-spiking-concepts"
-version = "0.1.0"
+version = "0.2.0"
 description = "Reproducible research on semantic organization in recurrent spiking neural networks"
 requires-python = ">=3.11,<3.14"
 dependencies = [
@@ -31,6 +31,7 @@ e1-ann-baseline = "e1_spikes.ann_baseline:main"
 e1-generalization = "e1_spikes.generalization:main"
 e1-consolidate = "e1_spikes.consolidate:main"
 e1-export-data = "e1_spikes.export_data:main"
+e1-mechanistic = "e1_spikes.mechanistic:main"
 
 [build-system]
 requires = ["hatchling"]

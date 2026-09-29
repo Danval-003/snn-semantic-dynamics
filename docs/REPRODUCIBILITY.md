@@ -11,6 +11,7 @@
 uv sync --extra dev
 uv run e1-export-data --check
 uv run pytest
+uv run e1-mechanistic --config configs/mechanistic.toml
 ```
 
 ## Quick verification
@@ -61,6 +62,8 @@ Spanish lexicon or over alternative dataset construction choices.
   relation-disjoint, context-exposure, context-transfer, and matched-control
   triplets as JSONL.
 - `data/generated/manifest.json` records row counts and SHA-256 digests.
+- `data/generated/lexical_holdout_pairs.jsonl` is a second balanced 2×2 set,
+  disjoint from the original factorial and excluded from all training.
 - `uv run e1-export-data --check` fails if the tracked exports diverge from the
   constructors used by the experiment; the CI workflow runs this check.
 - Relation-disjoint tests remove both orientations of every held positive edge.
@@ -75,3 +78,16 @@ The E1 artifact is cited through [`CITATION.cff`](../CITATION.cff) and released
 under the MIT License. Release tags identify frozen paper-facing snapshots;
 generated checkpoints remain excluded because they are reproducible and are
 not required to audit the reported metrics.
+
+## Mechanistic extension and run manifests
+
+E1.5 separates training from analysis: `e1-mechanistic` loads the frozen SNN
+and ANN checkpoints and runs all readouts, offsets, and interventions without
+updating parameters. Use `--summarize-only` to recompute aggregate intervals
+from per-seed JSON files without loading a checkpoint.
+
+Every E1.5 run writes `runs/mechanistic/manifest.json` with the exact config and
+dataset and checkpoint SHA-256 hashes, seeds, package/Python/PyTorch versions,
+Git commit and dirty state, and hashes of every result file. Historical v1.0 runners are left
+unchanged to protect paper parity; the manifest contract applies to new v1.1
+runners.

@@ -12,6 +12,7 @@ from .generalization import (
     build_relation_data,
     matched_no_context_training,
 )
+from .lexical_holdout import build_lexical_holdout
 
 
 DEFAULT_SEED = 20260928
@@ -43,17 +44,24 @@ def rendered_files(seed: int = DEFAULT_SEED) -> dict[str, str]:
         "context_no_exposure_control.jsonl": no_context,
     }
     rendered = {name: serialize_triplets(items) for name, items in datasets.items()}
+    lexical_rows = build_lexical_holdout()
+    rendered["lexical_holdout_pairs.jsonl"] = "".join(
+        json.dumps({"index": index, **row}, ensure_ascii=False, sort_keys=True) + "\n"
+        for index, row in enumerate(lexical_rows)
+    )
+    counts = {name: len(items) for name, items in datasets.items()}
+    counts["lexical_holdout_pairs.jsonl"] = len(lexical_rows)
     manifest = {
         "schema_version": 1,
         "generator": "uv run e1-export-data",
         "seed": seed,
         "description": (
-            "Deterministic exports of the exact fixed validation and generalization "
-            "triplets constructed by the experiment code."
+            "Deterministic exports of fixed validation, generalization triplets, "
+            "and the independent lexical holdout constructed by the experiment code."
         ),
         "files": {
             name: {
-                "examples": len(datasets[name]),
+                "examples": counts[name],
                 "sha256": sha256(content),
             }
             for name, content in rendered.items()

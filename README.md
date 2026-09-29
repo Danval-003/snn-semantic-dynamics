@@ -3,7 +3,7 @@
 [![CI](https://github.com/Danval-003/snn-semantic-dynamics/actions/workflows/ci.yml/badge.svg)](https://github.com/Danval-003/snn-semantic-dynamics/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**[📄 Manuscript](paper/orthographic-to-semantic-abstraction.pdf) · [💻 Code](https://github.com/Danval-003/snn-semantic-dynamics) · [📊 Results](docs/RESULTS.md) · [🧪 Reproduce](docs/REPRODUCIBILITY.md)**
+**[📄 Manuscript](paper/orthographic-to-semantic-abstraction.pdf) · [💻 Code](https://github.com/Danval-003/snn-semantic-dynamics) · [📊 Frozen v1.0 results](docs/RESULTS.md) · [🔬 E1.5 mechanics](docs/MECHANISTIC_RESULTS.md) · [🧪 Reproduce](docs/REPRODUCIBILITY.md)**
 
 E1 is a small, CPU-reproducible study of whether a recurrent spiking neural
 network can transform grapheme events into semantically organized neural
@@ -93,7 +93,22 @@ make data       # regenerate the tracked, human-auditable dataset exports
 make quick      # tests + short smoke run
 make full       # all experiments, summaries, and figures
 make figures    # regenerate tracked SVG figures from run artifacts
+make mechanistic # frozen-checkpoint settling analysis; no retraining
 ```
+
+## Mechanistic v1.1 extension
+
+The `e1-mechanistic` branch preserves `v1.0-e1` as an exact legacy mode and
+adds explicit settling relative to each word's final event. It evaluates five
+non-interchangeable readouts and four post-stimulus causal interventions on
+frozen SNN/ANN checkpoints. A second, balanced 48-pair lexical set is evaluated
+without entering training.
+
+The main SNN result replicates across both pair sets: layer-3 integrated
+abstraction changes from negative at stimulus offset zero to positive after 12
+silent recurrent steps. Removing recurrent communication reduces this change;
+resetting state abolishes it. See
+[the E1.5 report](docs/MECHANISTIC_RESULTS.md) for claim boundaries.
 
 The full suite runs five seeds and takes roughly 15–25 minutes on a typical
 CPU. Generated checkpoints and detailed per-seed artifacts live under `runs/`
@@ -106,6 +121,7 @@ versioned.
 configs/                  experiment configurations
 data/                     audited, versioned evaluation pairs
 data/generated/           exact generated train/test manifests
+docs/MECHANISTIC_RESULTS.md frozen-checkpoint E1.5 results
 docs/EXPERIMENT.md        full protocol and detailed results
 docs/RESEARCH_LOG.md      chronological research decisions
 docs/RESULTS.md           frozen result tables and claim boundaries
@@ -130,8 +146,8 @@ not unsupervised corpus exposure.
 See [the frozen results](docs/RESULTS.md), [the research log](docs/RESEARCH_LOG.md),
 and [the full protocol](docs/EXPERIMENT.md).
 
-The exact fixed-validation, relation-disjoint, and contextual-transfer
-triplets are exported under [`data/generated/`](data/generated/). Run
+The exact fixed-validation, relation-disjoint, contextual-transfer, and lexical
+holdout datasets are exported under [`data/generated/`](data/generated/). Run
 `make data` to regenerate them; CI verifies that these files remain identical
 to the constructors used by the experiments. Per-seed headline metrics are
 preserved in [`reports/raw_metrics.jsonl`](reports/raw_metrics.jsonl), allowing

@@ -1,0 +1,17 @@
+models = ["snn", "ann"]
+seeds = [7]
+interventions = ["natural", "no_recurrent"]
+offsets = [0, 4, 12]
+local_width = 4
+validation_random_size = 8
+bootstrap_samples = 100
+base_config = "configs/smoke.toml"
+output_dir = "runs/mechanistic_smoke"
+
+[checkpoint_dirs]
+snn = "runs/e12b/heterogeneous_learnable"
+ann = "runs/ann"
+
+[pair_sets]
+factorial = "data/factorial_pairs.jsonl"
+lexical_holdout = "data/generated/lexical_holdout_pairs.jsonl"

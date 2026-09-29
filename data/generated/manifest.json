@@ -1,5 +1,5 @@
 {
-  "description": "Deterministic exports of the exact fixed validation and generalization triplets constructed by the experiment code.",
+  "description": "Deterministic exports of fixed validation, generalization triplets, and the independent lexical holdout constructed by the experiment code.",
   "files": {
     "context_exposure_train.jsonl": {
       "examples": 32,
@@ -16,6 +16,10 @@
     "fixed_validation.jsonl": {
       "examples": 260,
       "sha256": "167b48ee739ad46ccd5e3216b5c9a6e5c50ea169acc3ddfcd06684437a65f689"
+    },
+    "lexical_holdout_pairs.jsonl": {
+      "examples": 48,
+      "sha256": "9f40cbec84bbc6d8ebe48f9a5488d2b97cdd07570b343e67ecd2065dbcc04a04"
     },
     "relation_disjoint_test.jsonl": {
       "examples": 36,

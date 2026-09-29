@@ -80,7 +80,17 @@ class RecurrentALIFLayer(nn.Module):
         if self.rec is not None:
             nn.init.orthogonal_(self.rec.weight, gain=0.25)
 
-    def forward(self, inputs: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self,
+        inputs: torch.Tensor,
+        stimulus_ends: torch.Tensor | None = None,
+        settling_intervention: str = "natural",
+    ) -> torch.Tensor:
+        valid = {"natural", "no_recurrent", "intrinsic_only", "reset_state"}
+        if settling_intervention not in valid:
+            raise ValueError(f"Intervención desconocida: {settling_intervention}")
+        if settling_intervention != "natural" and stimulus_ends is None:
+            raise ValueError("Las intervenciones requieren stimulus_ends")
         batch, steps, _ = inputs.shape
         membrane = inputs.new_zeros(batch, self.size)
         previous_spike = inputs.new_zeros(batch, self.size)
@@ -89,9 +99,25 @@ class RecurrentALIFLayer(nn.Module):
         adapt_decay = torch.sigmoid(self.adapt_logit).clamp(0.5, 0.999)
         outputs = []
         for time_index in range(steps):
+            post = None
+            first_post = None
+            if stimulus_ends is not None:
+                ends = stimulus_ends.to(inputs.device)
+                post = time_index > ends
+                first_post = time_index == ends + 1
+            if settling_intervention == "reset_state" and first_post is not None:
+                keep = (~first_post).unsqueeze(1)
+                membrane = membrane * keep
+                previous_spike = previous_spike * keep
+                adaptation = adaptation * keep
             current = self.input(inputs[:, time_index])
             if self.rec is not None:
-                current = current + self.rec(previous_spike)
+                recurrent_drive = self.rec(previous_spike)
+                if settling_intervention in {"no_recurrent", "intrinsic_only"} and post is not None:
+                    recurrent_drive = recurrent_drive * (~post).unsqueeze(1)
+                current = current + recurrent_drive
+            if settling_intervention == "intrinsic_only" and post is not None:
+                current = current * (~post).unsqueeze(1)
             if self.adaptive:
                 adaptation = adapt_decay * adaptation + previous_spike
                 dynamic_threshold = self.threshold + torch.relu(self.adapt_strength) * adaptation
@@ -130,10 +156,20 @@ class HierarchicalSNN(nn.Module):
             for i in range(len(hidden_sizes))
         )
 
-    def forward(self, events: torch.Tensor, return_all: bool = False):
+    def forward(
+        self,
+        events: torch.Tensor,
+        return_all: bool = False,
+        stimulus_ends: torch.Tensor | None = None,
+        settling_intervention: str = "natural",
+    ):
         activity = events
         all_layers = []
         for layer in self.layers:
-            activity = layer(activity)
+            activity = layer(
+                activity,
+                stimulus_ends=stimulus_ends,
+                settling_intervention=settling_intervention,
+            )
             all_layers.append(activity)
         return all_layers if return_all else activity

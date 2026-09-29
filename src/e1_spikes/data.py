@@ -18,6 +18,15 @@ def normalize(text: str) -> str:
     return unicodedata.normalize("NFC", text.strip().lower())
 
 
+@dataclass(frozen=True)
+class EncodedEvents:
+    events: torch.Tensor
+    stimulus_ends: torch.Tensor
+    event_times: tuple[tuple[int, ...], ...]
+    settling_steps: int
+    mode: str
+
+
 class EventEncoder:
     """Convierte grafemas en eventos one-hot; no contiene embeddings aprendidos."""
 
@@ -37,6 +46,7 @@ class EventEncoder:
         return self.max_chars * self.char_steps + self.post_steps
 
     def encode(self, texts: list[str]) -> torch.Tensor:
+        """Legacy E1 encoding. This method is intentionally frozen."""
         events = torch.zeros(len(texts), self.total_steps, self.channels)
         for batch_index, raw_text in enumerate(texts):
             text = normalize(raw_text)[: self.max_chars]
@@ -46,6 +56,43 @@ class EventEncoder:
                 time_index = char_index * self.char_steps
                 events[batch_index, time_index, self.index[char]] = 1.0
         return events
+
+    def schedule(self, raw_text: str) -> tuple[str, tuple[int, ...]]:
+        text = normalize(raw_text)[: self.max_chars]
+        times = tuple(index * self.char_steps for index in range(len(text)))
+        return text, times
+
+    def encode_explicit(
+        self,
+        texts: list[str],
+        *,
+        settling_steps: int | None = None,
+        minimum_steps: int = 0,
+    ) -> EncodedEvents:
+        """Encode with an explicit horizon relative to each final real event.
+
+        ``minimum_steps=self.total_steps`` is the exact legacy-parity mode.
+        Otherwise the batch ends only after every example receives the same
+        requested amount of stimulus-free recurrent evolution.
+        """
+        settling = self.post_steps if settling_steps is None else settling_steps
+        if settling < 0:
+            raise ValueError("settling_steps debe ser no negativo")
+        schedules = [self.schedule(text) for text in texts]
+        ends = [times[-1] if times else 0 for _, times in schedules]
+        steps = max(max(ends, default=0) + 1 + settling, minimum_steps)
+        events = torch.zeros(len(texts), steps, self.channels)
+        for row, (text, times) in enumerate(schedules):
+            for char, time in zip(text, times, strict=True):
+                if char in self.index:
+                    events[row, time, self.index[char]] = 1.0
+        return EncodedEvents(
+            events=events,
+            stimulus_ends=torch.tensor(ends, dtype=torch.long),
+            event_times=tuple(times for _, times in schedules),
+            settling_steps=settling,
+            mode="legacy" if steps == self.total_steps else "relative",
+        )
 
 
 @dataclass(frozen=True)

@@ -26,7 +26,12 @@ class AdaptiveLeakyRNNLayer(nn.Module):
         if self.rec is not None:
             nn.init.orthogonal_(self.rec.weight, gain=0.25)
 
-    def forward(self, inputs):
+    def forward(self, inputs, stimulus_ends=None, settling_intervention="natural"):
+        valid = {"natural", "no_recurrent", "intrinsic_only", "reset_state"}
+        if settling_intervention not in valid:
+            raise ValueError(f"Intervención desconocida: {settling_intervention}")
+        if settling_intervention != "natural" and stimulus_ends is None:
+            raise ValueError("Las intervenciones requieren stimulus_ends")
         batch, steps, _ = inputs.shape
         state = inputs.new_zeros(batch, self.size)
         adaptation = inputs.new_zeros(batch, self.size)
@@ -34,9 +39,24 @@ class AdaptiveLeakyRNNLayer(nn.Module):
         adapt_decay = torch.sigmoid(self.adapt_logit).clamp(0.5, 0.999)
         outputs = []
         for time_index in range(steps):
+            post = None
+            first_post = None
+            if stimulus_ends is not None:
+                ends = stimulus_ends.to(inputs.device)
+                post = time_index > ends
+                first_post = time_index == ends + 1
+            if settling_intervention == "reset_state" and first_post is not None:
+                keep = (~first_post).unsqueeze(1)
+                state = state * keep
+                adaptation = adaptation * keep
             current = self.input(inputs[:, time_index])
             if self.rec is not None:
-                current = current + self.rec(state)
+                recurrent_drive = self.rec(state)
+                if settling_intervention in {"no_recurrent", "intrinsic_only"} and post is not None:
+                    recurrent_drive = recurrent_drive * (~post).unsqueeze(1)
+                current = current + recurrent_drive
+            if settling_intervention == "intrinsic_only" and post is not None:
+                current = current * (~post).unsqueeze(1)
             if self.adaptive:
                 adaptation = adapt_decay * adaptation + state.abs()
                 current = current - torch.relu(self.adapt_strength) * adaptation
@@ -68,11 +88,20 @@ class HierarchicalANN(nn.Module):
             for index in range(len(hidden_sizes))
         )
 
-    def forward(self, events, return_all=False):
+    def forward(
+        self,
+        events,
+        return_all=False,
+        stimulus_ends=None,
+        settling_intervention="natural",
+    ):
         activity = events
         layers = []
         for layer in self.layers:
-            activity = layer(activity)
+            activity = layer(
+                activity,
+                stimulus_ends=stimulus_ends,
+                settling_intervention=settling_intervention,
+            )
             layers.append(activity)
         return layers if return_all else activity
-

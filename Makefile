@@ -1,4 +1,4 @@
-.PHONY: setup test data quick full figures
+.PHONY: setup test data quick full figures mechanistic
 
 setup:
 	UV_CACHE_DIR=/tmp/e1-uv-cache uv sync --extra dev
@@ -17,3 +17,6 @@ full:
 
 figures:
 	UV_CACHE_DIR=/tmp/e1-uv-cache uv run python scripts/make_figures.py
+
+mechanistic:
+	UV_CACHE_DIR=/tmp/e1-uv-cache uv run e1-mechanistic --config configs/mechanistic.toml

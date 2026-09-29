@@ -12,6 +12,7 @@ def test_exports_are_deterministic_and_manifested():
     assert manifest["files"]["fixed_validation.jsonl"]["examples"] == 260
     assert manifest["files"]["relation_disjoint_test.jsonl"]["examples"] == 36
     assert manifest["files"]["context_transfer_test.jsonl"]["examples"] == 48
+    assert manifest["files"]["lexical_holdout_pairs.jsonl"]["examples"] == 48
 
 
 def test_relation_disjoint_edges_do_not_leak_into_training():
