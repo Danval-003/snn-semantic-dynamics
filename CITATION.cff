@@ -9,12 +9,12 @@ authors:
 repository-code: "https://github.com/Danval-003/snn-semantic-dynamics"
 url: "https://github.com/Danval-003/snn-semantic-dynamics"
 license: MIT
-version: "1.0.0-e1"
-date-released: 2026-09-28
+version: "2.0.0-e1"
+date-released: 2026-09-30
 abstract: >-
   Reproducible experiments on how matched recurrent spiking and artificial
   neural networks transform ordered grapheme events into semantic population
-  structure.
+  trajectories across depth and post-stimulus recurrent settling.
 keywords:
   - spiking neural networks
   - semantic representation
@@ -23,7 +23,7 @@ keywords:
   - reproducible research
 preferred-citation:
   type: article
-  title: "Orthographic-to-Semantic Abstraction in Matched Spiking and Artificial Recurrent Networks"
+  title: "Orthographic-to-Semantic Abstraction in Matched Spiking and Artificial Recurrent Networks: Depth, Settling, and Recurrent Dynamics"
   authors:
     - family-names: "Valdez"
       given-names: "Daniel"

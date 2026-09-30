@@ -96,7 +96,7 @@ make figures    # regenerate tracked SVG figures from run artifacts
 make mechanistic # frozen-checkpoint settling analysis; no retraining
 ```
 
-## Mechanistic v1.1 extension
+## E1-v2 release: mechanistic settling extension
 
 The `e1-mechanistic` branch preserves `v1.0-e1` as an exact legacy mode and
 adds explicit settling relative to each word's final event. It evaluates five
@@ -108,7 +108,8 @@ The main SNN result replicates across both pair sets: layer-3 integrated
 abstraction changes from negative at stimulus offset zero to positive after 12
 silent recurrent steps. Removing recurrent communication reduces this change;
 resetting state abolishes it. See
-[the E1.5 report](docs/MECHANISTIC_RESULTS.md) for claim boundaries.
+[the E1.5 mechanistic report](docs/MECHANISTIC_RESULTS.md) for claim boundaries
+and [the E1-v2 release record](docs/RELEASE_E1_V2.md) for the frozen snapshot.
 
 The full suite runs five seeds and takes roughly 15–25 minutes on a typical
 CPU. Generated checkpoints and detailed per-seed artifacts live under `runs/`

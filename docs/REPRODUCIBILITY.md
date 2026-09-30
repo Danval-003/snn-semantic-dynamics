@@ -73,7 +73,10 @@ Spanish lexicon or over alternative dataset construction choices.
 ## Versioned artifact
 
 The manuscript is stored at
-[`paper/orthographic-to-semantic-abstraction.pdf`](../paper/orthographic-to-semantic-abstraction.pdf).
+[`paper/orthographic-to-semantic-abstraction-e1-v2.pdf`](../paper/orthographic-to-semantic-abstraction-e1-v2.pdf).
+The original E1-v1 manuscript remains frozen at
+[`paper/orthographic-to-semantic-abstraction.pdf`](../paper/orthographic-to-semantic-abstraction.pdf)
+and in tag `v1.0-e1`.
 The E1 artifact is cited through [`CITATION.cff`](../CITATION.cff) and released
 under the MIT License. Release tags identify frozen paper-facing snapshots;
 generated checkpoints remain excluded because they are reproducible and are
@@ -88,6 +91,6 @@ from per-seed JSON files without loading a checkpoint.
 
 Every E1.5 run writes `runs/mechanistic/manifest.json` with the exact config and
 dataset and checkpoint SHA-256 hashes, seeds, package/Python/PyTorch versions,
-Git commit and dirty state, and hashes of every result file. Historical v1.0 runners are left
-unchanged to protect paper parity; the manifest contract applies to new v1.1
-runners.
+Git commit and dirty state, and hashes of every result file. Historical v1.0
+runners are left unchanged to protect paper parity; the manifest contract
+applies to the E1-v2 mechanistic runners.

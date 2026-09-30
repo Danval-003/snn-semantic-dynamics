@@ -1,11 +1,12 @@
 # Manuscript
 
 **Orthographic-to-Semantic Abstraction in Matched Spiking and Artificial
-Recurrent Networks**
+Recurrent Networks: Depth, Settling, and Recurrent Dynamics**
 
 Daniel Valdez, 2026.
 
-- [Read the manuscript](orthographic-to-semantic-abstraction.pdf)
+- [Read the E1-v2 manuscript](orthographic-to-semantic-abstraction-e1-v2.pdf)
+- [Read the frozen E1-v1 manuscript](orthographic-to-semantic-abstraction.pdf)
 - [Inspect the frozen results](../docs/RESULTS.md)
 - [Reproduce the experiments](../docs/REPRODUCIBILITY.md)
 
