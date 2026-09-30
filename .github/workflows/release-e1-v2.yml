@@ -1,0 +1,82 @@
+name: Publish E1-v2 release
+
+on:
+  push:
+    branches: [e1-mechanistic]
+    paths:
+      - .github/workflows/release-e1-v2.yml
+      - release-assets/e1-v2.0.0/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-e1-v2.0-e1
+  cancel-in-progress: false
+
+env:
+  RELEASE_TAG: v2.0-e1
+  ASSET_DIR: release-assets/e1-v2.0.0
+  PAPER: paper/orthographic-to-semantic-abstraction-e1-v2.pdf
+
+jobs:
+  publish:
+    name: Validate and publish frozen release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out release branch and tags
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Verify frozen tag and release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag_commit="$(git rev-parse "${RELEASE_TAG}^{commit}")"
+          manifest_commit="$(jq -r .git_commit "${ASSET_DIR}/RELEASE_MANIFEST.json")"
+          test "${tag_commit}" = "${manifest_commit}"
+
+          verify_dir="${RUNNER_TEMP}/e1-v2-release"
+          mkdir -p "${verify_dir}"
+          cp "${PAPER}" "${verify_dir}/"
+          cp "${ASSET_DIR}/snn-semantic-dynamics-e1-v2.0.0-reproducibility.tar.gz" "${verify_dir}/"
+          cp "${ASSET_DIR}/SHA256SUMS" "${verify_dir}/"
+          (cd "${verify_dir}" && sha256sum -c SHA256SUMS)
+
+          paper_at_tag_sha="$(git show "${RELEASE_TAG}:${PAPER}" | sha256sum | cut -d ' ' -f 1)"
+          manifest_paper_sha="$(jq -r '.files[] | select(.path | endswith(".pdf")) | .sha256' "${ASSET_DIR}/RELEASE_MANIFEST.json")"
+          test "${paper_at_tag_sha}" = "${manifest_paper_sha}"
+
+          tar -tzf "${ASSET_DIR}/snn-semantic-dynamics-e1-v2.0.0-reproducibility.tar.gz" >/dev/null
+
+      - name: Create or update GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          assets=(
+            "${PAPER}#E1-v2 manuscript"
+            "${ASSET_DIR}/snn-semantic-dynamics-e1-v2.0.0-reproducibility.tar.gz#E1-v2 reproducibility bundle"
+            "${ASSET_DIR}/RELEASE_MANIFEST.json#Release manifest"
+            "${ASSET_DIR}/SHA256SUMS#SHA-256 checksums"
+          )
+
+          if gh release view "${RELEASE_TAG}" >/dev/null 2>&1; then
+            gh release edit "${RELEASE_TAG}" \
+              --title "E1-v2 — Depth, Settling, and Recurrent Dynamics" \
+              --notes-file docs/RELEASE_E1_V2.md \
+              --latest
+            gh release upload "${RELEASE_TAG}" "${assets[@]}" --clobber
+          else
+            gh release create "${RELEASE_TAG}" "${assets[@]}" \
+              --verify-tag \
+              --title "E1-v2 — Depth, Settling, and Recurrent Dynamics" \
+              --notes-file docs/RELEASE_E1_V2.md \
+              --latest
+          fi
+
+          gh release view "${RELEASE_TAG}" --json url --jq .url

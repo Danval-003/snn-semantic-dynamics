@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "release": "E1-v2",
+  "version": "2.0.0-e1",
+  "git_tag": "v2.0-e1",
+  "git_commit": "e993e2037e261377884576e1287fd94a8fb09216",
+  "release_date": "2026-09-30",
+  "validation": {
+    "tests_passed": 24,
+    "dataset_exports_current": true,
+    "pdf_pages": 7
+  },
+  "files": [
+    {
+      "path": "orthographic-to-semantic-abstraction-e1-v2.pdf",
+      "bytes": 448712,
+      "sha256": "e80c34394dfa76d468bed7a1db3613ed5c1d35d75b7af214cb206fa689639526"
+    },
+    {
+      "path": "snn-semantic-dynamics-e1-v2.0.0-reproducibility.tar.gz",
+      "bytes": 2433808,
+      "sha256": "ff6b7c5323202e1ea1952cfbc5f4e46ea6a1f0b4e4794a54a12fda58190402f7"
+    }
+  ],
+  "bundle_contents": {
+    "source": "exact git archive of v2.0-e1",
+    "paper": "E1-v2 manuscript PDF",
+    "mechanistic_outputs": "aggregate, manifest, and 40 per-seed intervention files",
+    "frozen_checkpoints": "five SNN and five matched ANN checkpoints plus their summaries"
+  },
+  "scientific_provenance": {
+    "mechanistic_manifest_sha256": "0ba03067cd4d113c8db83721df42eda1b06028e7383aec489609e42b20b98695",
+    "mechanistic_summary_sha256": "182b3ca130d77d09a109fd2c63b0ff4c0e9fab3094402170544c6d3027715f1b"
+  }
+}
